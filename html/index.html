@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Aplicaión Presupuesto</title>
+</head>
+
+<body onload="cargarApp()">
+    <!--Header-->
+    <header class="cabecero">
+        <div class="presupuesto">
+            <h1 class="presupuesto_titulo">Presupuesto Disponibles</h1>
+
+            <div class="presupuesto_valor" id="presupuesto"></div>
+
+            <!--Ingresos-->
+            <div class="presupuesto_ingreso limpiarEstilos">
+                <div class="presupuesto_ingreso--texto">Ingresos</div>
+                <div class="derecha">
+                    <div class="presupuesto_ingreso--valor" id="ingresos"></div>
+                    <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+                </div>
+            </div>
+
+            <!--Egresos-->
+            <div class="presupuesto_egreso limpiarEstilos">
+                <div class="presupuesto_egreso--texto">Egresos</div>
+                <div class="derecha limpiarEstilos">
+                    <div class="presupuesto_egreso--valor" id="egresos"></div>
+                    <div class="presupuesto_egreso--porcentaje" id="porcentaje">
+                        45%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--main-->
+    <main class="contenedor limpiarEstilos">
+        <!--Ingreso-->
+        <div class="ingreso">
+            <h2 class="ingreso_titulo">Ingreso</h2>
+
+            <div id="lista-ingreso">
+                <div class="elemento limpiarEstilos">
+                    <div class="elemento_descripcion">Salario</div>
+                    <div class="derecha limpiarEstilos">
+                        <div class="elemento_valor">+2,000</div>
+                        <div class="elemento_eliminar">
+                            <button class="elemento_eliminar--btn">
+                                <ion-icon name="close-circle-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Egreso-->
+        <div class="egreso">
+            <h2 class="egreso_titulo">Egresos</h2>
+
+            <div id='lista-egreso'>
+                
+            </div>
+    </main>
+
+    <!--Llamada a los scripts-->
+
+    <!--script Dato-->
+    <script src="../js/Dato.js"></script>
+
+    <!--script Ingreso-->
+    <script src="../js/Ingreso.js"></script>
+
+    <!--script Egreso-->
+    <script src="..//js/Egreso.js"></script>
+
+    <!--script Main - Ejecutable -->
+    <script src="../js/Main.js"></script>
+
+    <!--script icons-->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>
